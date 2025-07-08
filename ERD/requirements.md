@@ -4,6 +4,8 @@ This document outlines the detailed database requirements for the **ALX Airbnb D
 
 ---
 
+![ERD Diagram](./AirbnbClone.svg)
+
 ## 🗄️ Entities & Attributes
 
 ### User
