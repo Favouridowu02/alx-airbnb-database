@@ -1,4 +1,4 @@
-
+-- Create the database schema for the Airbnb-like application
 CREATE TABLE IF NOT EXISTS users (
     user_id UUID PRIMARY KEY INDEX,
     first_name VARCHAR(50) NOT NULL UNIQUE,
