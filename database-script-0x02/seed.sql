@@ -9,7 +9,7 @@
 -- ============================================================
 -- Insert sample users with different roles (hosts, guests, admins)
 
-INSERT INTO users (user_id, first_name, last_name, email, password_hash, phone_number, role) VALUES
+INSERT INTO users (id, first_name, last_name, email, password_hash, phone_number, role) VALUES
 -- Admin users
 ('550e8400-e29b-41d4-a716-446655440000', 'John', 'Administrator', 'admin@airbnbclone.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1234567890', 'admin'),
 
@@ -34,7 +34,7 @@ INSERT INTO users (user_id, first_name, last_name, email, password_hash, phone_n
 -- ============================================================
 -- Insert sample properties hosted by users
 
-INSERT INTO properties (property_id, host_id, name, description, location, price_per_night) VALUES
+INSERT INTO properties (id, host_id, name, description, location, price_per_night) VALUES
 -- Sarah Johnson's properties
 ('660e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440001', 'Cozy Downtown Apartment', 'Beautiful 2-bedroom apartment in the heart of downtown with modern amenities and city views. Perfect for business travelers and couples.', 'New York, NY', 150.00),
 ('660e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440001', 'Riverside Studio Loft', 'Charming studio loft overlooking the river with exposed brick walls and industrial design. Great for solo travelers.', 'New York, NY', 120.00),
@@ -60,7 +60,7 @@ INSERT INTO properties (property_id, host_id, name, description, location, price
 -- ============================================================
 -- Insert sample bookings with various statuses and dates
 
-INSERT INTO bookings (booking_id, user_id, property_id, start_date, end_date, total_price, status) VALUES
+INSERT INTO bookings (id, user_id, property_id, start_date, end_date, total_price, status) VALUES
 -- Recent confirmed bookings
 ('770e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440006', '660e8400-e29b-41d4-a716-446655440001', '2025-08-15', '2025-08-18', 450.00, 'confirmed'),
 ('770e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440007', '660e8400-e29b-41d4-a716-446655440003', '2025-08-20', '2025-08-25', 1500.00, 'confirmed'),
@@ -91,7 +91,7 @@ INSERT INTO bookings (booking_id, user_id, property_id, start_date, end_date, to
 -- ============================================================
 -- Insert payments for confirmed bookings
 
-INSERT INTO payments (payment_id, booking_id, amount, payment_method) VALUES
+INSERT INTO payments (id, booking_id, amount, payment_method) VALUES
 -- Payments for confirmed bookings
 ('880e8400-e29b-41d4-a716-446655440001', '770e8400-e29b-41d4-a716-446655440001', 450.00, 'credit_card'),
 ('880e8400-e29b-41d4-a716-446655440002', '770e8400-e29b-41d4-a716-446655440002', 1500.00, 'stripe'),
@@ -115,7 +115,7 @@ INSERT INTO payments (payment_id, booking_id, amount, payment_method) VALUES
 -- ============================================================
 -- Insert sample messages between users (guests and hosts)
 
-INSERT INTO messages (message_id, sender_id, receiver_id, message_body) VALUES
+INSERT INTO messages (id, sender_id, receiver_id, message_body) VALUES
 -- Pre-booking inquiries
 ('990e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440006', '550e8400-e29b-41d4-a716-446655440001', 'Hi Sarah! I am interested in booking your downtown apartment for August 15-18. Is it available?'),
 ('990e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440006', 'Hello James! Yes, the apartment is available for those dates. It is perfect for couples and the location is very convenient.'),
@@ -148,7 +148,7 @@ INSERT INTO messages (message_id, sender_id, receiver_id, message_body) VALUES
 -- ============================================================
 -- Insert reviews for completed stays
 
-INSERT INTO reviews (review_id, user_id, property_id, rating, comment) VALUES
+INSERT INTO reviews (id, user_id, property_id, rating, comment) VALUES
 -- 5-star reviews
 ('aa0e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440006', '660e8400-e29b-41d4-a716-446655440001', 5, 'Absolutely perfect stay! Sarah was an incredible host and the apartment exceeded all expectations. The location is unbeatable and the amenities were top-notch. Would definitely stay here again!'),
 ('aa0e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440007', '660e8400-e29b-41d4-a716-446655440003', 5, 'The beach house was a dream come true! Michael was very responsive and helpful. The ocean views were breathtaking and the house had everything we needed for a perfect family vacation.'),
