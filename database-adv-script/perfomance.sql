@@ -3,9 +3,16 @@
 CREATE INDEX idx_booking_user_id ON bookings(user_id);
 CREATE INDEX idx_booking_property_id ON bookings(property_id);
 CREATE INDEX idx_booking_created_at ON bookings(created_at);
-CREATE INDEX idx_payment_booking_id ON payments(booking_id);
+-- CREATE INDEX idx_payment_booking_id ON payments(booking_id);
 
-EXPLAIN SELECT
+-- Drop indexes related to bookings and payments tables
+
+-- DROP INDEX idx_booking_user_id ON bookings;
+-- DROP INDEX idx_booking_property_id ON bookings;
+-- DROP INDEX idx_booking_created_at ON bookings;
+DROP INDEX idx_payment_booking_id ON payments;
+
+SELECT
     b.id,
     b.start_date,
     b.end_date,
@@ -32,6 +39,9 @@ INNER JOIN
     properties p ON b.property_id = p.id
 LEFT JOIN
     payments pay ON b.id = pay.booking_id
+WHERE
+    pay.status = 'completed'
+    AND b.created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY)
 ORDER BY
     b.created_at DESC
 LIMIT 100;
