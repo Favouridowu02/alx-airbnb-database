@@ -12,7 +12,7 @@ CREATE INDEX idx_booking_created_at ON bookings(created_at);
 -- DROP INDEX idx_payment_booking_id ON payments;
 -- DROP INDEX idx_booking_created_at ON bookings;
 
-SELECT
+EXPLAIN SELECT
     b.id,
     b.start_date,
     b.end_date,
