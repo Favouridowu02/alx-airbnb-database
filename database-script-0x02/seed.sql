@@ -9,16 +9,16 @@
 -- ============================================================
 -- Insert sample users with different roles (hosts, guests, admins)
 
-INSERT INTO users (id, first_name, last_name, email, password_hash, phone_number, role) VALUES
--- Admin users
-('550e8400-e29b-41d4-a716-446655440000', 'John', 'Administrator', 'admin@airbnbclone.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1234567890', 'admin'),
+    INSERT INTO users (id, first_name, last_name, email, password_hash, phone_number, role) VALUES
+    -- Admin users
+    ('550e8400-e29b-41d4-a716-446655440000', 'John', 'Administrator', 'admin@airbnbclone.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1234567890', 'admin'),
 
--- Host users
-('550e8400-e29b-41d4-a716-446655440001', 'Sarah', 'Johnson', 'sarah.johnson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123001', 'user'),
-('550e8400-e29b-41d4-a716-446655440002', 'Michael', 'Chen', 'michael.chen@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123002', 'user'),
-('550e8400-e29b-41d4-a716-446655440003', 'Emily', 'Rodriguez', 'emily.rodriguez@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123003', 'user'),
-('550e8400-e29b-41d4-a716-446655440004', 'David', 'Thompson', 'david.thompson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123004', 'user'),
-('550e8400-e29b-41d4-a716-446655440005', 'Lisa', 'Wilson', 'lisa.wilson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123005', 'user'),
+    -- Host users
+    ('550e8400-e29b-41d4-a716-446655440001', 'Sarah', 'Johnson', 'sarah.johnson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123001', 'user'),
+    ('550e8400-e29b-41d4-a716-446655440002', 'Michael', 'Chen', 'michael.chen@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123002', 'user'),
+    ('550e8400-e29b-41d4-a716-446655440003', 'Emily', 'Rodriguez', 'emily.rodriguez@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123003', 'user'),
+    ('550e8400-e29b-41d4-a716-446655440004', 'David', 'Thompson', 'david.thompson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123004', 'user'),
+    ('550e8400-e29b-41d4-a716-446655440005', 'Lisa', 'Wilson', 'lisa.wilson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123005', 'user'),
 
 -- Guest users
 ('550e8400-e29b-41d4-a716-446655440006', 'James', 'Anderson', 'james.anderson@email.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewf.yJxN5bLGjNRC', '+1555123006', 'user'),
